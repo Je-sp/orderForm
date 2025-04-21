@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Fast Food Order Form</title>
+</head>
+<body>
+
+<form action="">
+  <fieldset>
+    <legend>Customer Information</legend>
+    <table>
+      <tr>
+        <td><label for="fullname">Full Name:</label></td>
+        <td><input type="text" id="fullname" name="fullname" required></td>
+      </tr>
+      <tr>
+        <td><label for="address">Complete Address:</label></td>
+        <td><input type="text" id="address" name="address" required></td>
+      </tr>
+      <tr>
+        <td><label for="contact">Contact Number:</label></td>
+        <td><input type="tel" id="contact" name="contact" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email Address:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="directions">How to get to your place:</label></td>
+        <td><textarea id="directions" name="directions" rows="4" cols="50" required></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="datetime">Date and Time:</label></td>
+        <td><input type="datetime-local" id="datetime" name="datetime"></td>
+      </tr>
+    </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>Order Form</legend>
+
+    <fieldset>
+      <legend>Burgers</legend>
+      <table>
+        <tr>
+          <td>Options:</td>
+          <td>
+            <input type="checkbox" id="single" name="burger_options" value="single">
+            <label for="single">Single Patty</label><br>
+            <input type="checkbox" id="double" name="burger_options" value="double">
+            <label for="double">Double Patty</label><br>
+            <input type="checkbox" id="cheese" name="burger_options" value="cheese">
+            <label for="cheese">With Cheese</label><br>
+            <input type="checkbox" id="coleslaw" name="burger_options" value="coleslaw">
+            <label for="coleslaw">Coleslaw</label><br>
+            <input type="checkbox" id="tomato" name="burger_options" value="tomato">
+            <label for="tomato">Tomato</label><br>
+            <input type="checkbox" id="onion" name="burger_options" value="onion">
+            <label for="onion">Onion</label><br>
+            <input type="checkbox" id="cucumber" name="burger_options" value="cucumber">
+            <label for="cucumber">Cucumber</label><br>
+            <input type="checkbox" id="bacon" name="burger_options" value="bacon">
+            <label for="bacon">Bacon</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Choice of Bun:</td>
+          <td>
+            <input type="radio" id="white" name="bun_choice" value="white">
+            <label for="white">White Bun</label><br>
+            <input type="radio" id="wheat" name="bun_choice" value="wheat">
+            <label for="wheat">Wheat Bun</label><br>
+            <input type="radio" id="honey_oat" name="bun_choice" value="honey_oat">
+            <label for="honey_oat">Honey Oat</label><br>
+            <input type="radio" id="sugar_free" name="bun_choice" value="sugar_free">
+            <label for="sugar_free">Sugar Free</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="burger_quantity">Quantity:</label></td>
+          <td><input type="number" id="burger_quantity" name="burger_quantity" min="1" value="1"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pasta</legend>
+      <table>
+        <tr>
+          <td>Select Sauce:</td>
+          <td>
+            <select id="pasta_sauce" name="pasta_sauce[]" multiple>
+              <option value="carbonara">Carbonara</option>
+              <option value="pesto">Pesto</option>
+              <option value="spaghetti">Spaghetti</option>
+              <option value="extra_cheese">Extra Cheese</option>
+              <option value="extra_sauce">Extra Sauce</option>
+              <option value="marinara">Marinara</option>
+              <option value="alfredo">Alfredo</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pasta_quantity">Quantity (per box):</label></td>
+          <td><input type="number" id="pasta_quantity" name="pasta_quantity" min="1" value="1"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Fries</legend>
+      <table>
+        <tr>
+          <td>Size:</td>
+          <td>
+            <input type="radio" id="small" name="fries_size" value="S">
+            <label for="small">S</label><br>
+            <input type="radio" id="medium" name="fries_size" value="M">
+            <label for="medium">M</label><br>
+            <input type="radio" id="large" name="fries_size" value="L">
+            <label for="large">L</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Flavor:</td>
+          <td>
+            <input type="checkbox" id="bbq" name="fries_flavor" value="bbq">
+            <label for="bbq">BBQ</label><br>
+            <input type="checkbox" id="cheese_flavor" name="fries_flavor" value="cheese">
+            <label for="cheese_flavor">Cheese</label><br>
+            <input type="checkbox" id="sour_cream" name="fries_flavor" value="sour_cream">
+            <label for="sour_cream">Sour Cream</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="fries_quantity">Quantity:</label></td>
+          <td><input type="number" id="fries_quantity" name="fries_quantity" min="1" value="1"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Drinks</legend>
+      <table>
+        <tr>
+          <td><label for="drink_kind">Kind of Drink:</label></td>
+          <td><input type="text" id="drink_kind" name="drink_kind"></td>
+        </tr>
+        <tr>
+          <td>Size:</td>
+          <td>
+            <input type="radio" id="small_drink" name="drink_size" value="S">
+            <label for="small_drink">S</label><br>
+            <input type="radio" id="medium_drink" name="drink_size" value="M">
+            <label for="medium_drink">M</label><br>
+            <input type="radio" id="large_drink" name="drink_size" value="L">
+            <label for="large_drink">L</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="drink_quantity">Quantity:</label></td>
+          <td><input type="number" id="drink_quantity" name="drink_quantity" min="1" value="1"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <table>
+      <tr>
+        <td><label for="feedback">Feedback on how to improve the ordering form:</label></td>
+        <td><textarea id="feedback" name="feedback" rows="4" cols="50"></textarea></td>
+      </tr>
+      <tr>
+        <td>Delivery Option:</td>
+        <td>
+          <input type="radio" id="delivery" name="delivery_option" value="delivery">
+          <label for="delivery">Delivery</label><br>
+          <input type="radio" id="pickup" name="delivery_option" value="pickup">
+          <label for="pickup">Pick-up</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <input type="submit" value="Submit Order">
+          <input type="reset" value="Clear Form">
+        </td>
+      </tr>
+    </table>
+
+  </fieldset>
+</form>
+
+</body>
+</html>
